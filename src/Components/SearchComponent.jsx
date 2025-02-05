@@ -74,6 +74,7 @@ function SearchComponent() {
         }
 
         if (abortController) {
+            console.log('aborting previous search');
             abortController.abort();
         }
 
@@ -89,10 +90,10 @@ function SearchComponent() {
             console.error('Search failed:', error);
         }
     };
+    const debouncedHandleSearch = debounce(handleSearch, 300);
 
     const handleChange = (e) => {
-        // debouncedHandleSearch(e.target.value);
-        debounce(handleSearch(e.target.value), 300);
+        debouncedHandleSearch(e.target.value);
     };
 
 
