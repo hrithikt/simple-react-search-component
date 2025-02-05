@@ -43,13 +43,13 @@ function SearchComponent() {
     };
 
     const searchOperation = async (value, signal) => {
-        try {
-            // simulate a delay
-            await new Promise((resolve) => setTimeout(resolve, 300));
-            
+        try {        
             if (signal.aborted) {
                 throw new Error('Aborted');
             }
+
+             // simulate a delay
+             await new Promise((resolve) => setTimeout(resolve, 300));
 
             const suggestions = dbData.filter((item) => {
                 return item.toLowerCase().includes(value.toLowerCase());
