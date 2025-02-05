@@ -1,0 +1,21 @@
+.search {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.search input[type="text"] {
+    width: 100%;
+    padding: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+}
+
+.item {
+    padding: 10px;
+    cursor: pointer;
+}
